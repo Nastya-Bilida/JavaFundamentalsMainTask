@@ -1,34 +1,24 @@
-import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-       System.out.println("Add name: ");
+        System.out.println("Add name: ");
         Scanner scanner = new Scanner(System.in);
-        String name = scanner.next();
-       System.out.println("Hello, " + name + "! ");
-
-        System.out.println("Reverse : Hello, " + name);
-        StringBuffer buff = new StringBuffer("Hello, " + name);
+        String name = "Hello, " + scanner.next() + "!";
+        System.out.println(name.toString());
+        StringBuffer buff = new StringBuffer(name);
         buff.reverse();
-        System.out.println(buff.toString());
+        System.out.println("Reverse: " + buff.toString());
 
-        System.out.print("Add amount of numbers: ");
         RandomNumbers randomNumbers = new RandomNumbers();
         randomNumbers.setArr();
-        randomNumbers.outputArr();
 
-        System.out.print("Add amount of numbers: ");
-       SummNumbers summNumbers = new SummNumbers();
-       summNumbers.setArr();
-       summNumbers.summa();
+        SumNumbers sumNumbers = new SumNumbers();
+        sumNumbers.setArray();
 
-       NumberMonth numberMonth = new NumberMonth();
-       numberMonth.inputNumberMonth();
-
-
+        NumberMonth numberMonth = new NumberMonth();
+        numberMonth.inputNumberMonth();
     }
 }
 
